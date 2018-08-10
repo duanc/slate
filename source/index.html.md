@@ -8,16 +8,24 @@ language_tabs: # must be one of https://git.io/vQNgJ
   - javascript
 
 toc_footers:
+  - 友情链接
   - <a href='#'>Sign Up for a Developer Key</a>
   - <a href='https://github.com/lord/slate'>Documentation Powered by Slate</a>
 
 includes:
   - errors
+  - user
 
 search: true
 ---
 
-# Introduction
+# 桂林集中监控系统 
+## 引言
+## 名词解释
+## 系统导读
+
+
+
 
 Welcome to the Kittn API! You can use our API to access Kittn API endpoints, which can get information on various cats, kittens, and breeds in our database.
 
