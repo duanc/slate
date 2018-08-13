@@ -1,17 +1,36 @@
 # 监控模板JS代码编写手册
 
-<p>
-
-123123123123123
-</p>
-<aside class="notice">
-This error section is stored in a separate file in <code>includes/_errors.md</code>. Slate allows you to optionally separate out your docs into many files...just save them to the <code>includes</code> folder and add them to the top of your <code>index.md</code>'s frontmatter. Files are included in the order listed.
-</aside>
-
-The Kittn API uses the following error codes:
-
 ## 引言
-## 名词解释
-## 系统导读
 
-123123
+桂林集中监控系统,具备动态添加不同链接类型的未知的监控设备,解析数据生成自定义的监控点,并且设置相应的通知方式.
+<b>本手册主要解读如何在添加监控模板中所编写相应的js代码.</b>
+
+- 在正式开始之前,您需要了解:
+
+<aside class="notice">编写JS设置监控模板,您应该 <b>熟悉</b> <code>Javascript</code> 语言.</aside>
+<aside class="notice">JS编码中支持到的最高版本为ES5.</aside>
+<aside class="notice">在测试中可使用console,但在提交执行中需要删除所有的输出.</aside>
+
+
+> To authorize, use this code:
+
+```javascript
+const kittn = require('kittn');
+
+let api = kittn.authorize('meowmeowmeow');
+```
+
+## 名词解释
+<p>当前文档中涉及的新名词定义,解释如下:</p>
+    
+ - <b>监控系统分类:</b>大的系统分类,如自动观测系统,雷达系统等.
+ - <b>监控模板:</b>从属于系统分类,系统分类下的某个特定功能集合的模板.如机场跑道模板,从属于自动观测系统.可根据模板生成具体的各个跑道.
+ - <b>监控模块:</b>从属于系统分类,系统分类下的某个特定功能集合,监控模板的实例.如根据机场跑道模板生成01跑道自动观测监控,02跑道自动观测监控等.
+ - <b>监控点:</b>某一监控模块下具体监控的x数据点.如 RVR 为一个监控点.
+ - <b>异常点:</b>某一监控数据因达成某一条件触发告警,为一个异常点,或称为故障点.一个监控点中可能存在多个异常点.
+ - <b>通知:</b>在触发异常点时,进行的通知方式和内容.
+
+## 系统机制
+
+
+

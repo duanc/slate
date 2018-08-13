@@ -66,10 +66,13 @@
     if (event.keyCode === 27) searchInput.value = '';
 
     if (searchInput.value) {
+      console.log(index);
+      console.log(searchInput.value);
       var results = index.search(searchInput.value).filter(function(r) {
         return r.score > 0.0001;
       });
 
+      console.log(results);
       if (results.length) {
         searchResults.empty();
         $.each(results, function (index, result) {
@@ -79,7 +82,7 @@
         highlight.call(searchInput);
       } else {
         searchResults.html('<li></li>');
-        $('.search-results li').text('No Results Found for "' + searchInput.value + '"');
+        $('.search-results li').text('未找到关键词: "' + searchInput.value + '"');
       }
     } else {
       unhighlight();
