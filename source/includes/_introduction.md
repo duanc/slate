@@ -12,15 +12,19 @@
 <aside class="notice">在测试中可使用console,但在提交执行中需要删除所有的输出.</aside>
 
 
-> To authorize, use this code:
 
-```javascript
-const kittn = require('kittn');
-
-let api = kittn.authorize('meowmeowmeow');
-```
 
 ## 名词解释
+
+  > To authorize, use this code:
+  
+  ```javascript
+  const kittn = require('kittn');
+  
+  let api = kittn.authorize('meowmeowmeow');
+  ```
+
+
 <p>当前文档中涉及的新名词定义,解释如下:</p>
     
  - <b>监控系统分类:</b>大的系统分类,如自动观测系统,雷达系统等.
@@ -30,7 +34,9 @@ let api = kittn.authorize('meowmeowmeow');
  - <b>异常点:</b>某一监控数据因达成某一条件触发告警,为一个异常点,或称为故障点.一个监控点中可能存在多个异常点.
  - <b>通知:</b>在触发异常点时,进行的通知方式和内容.
 
-## 系统机制
 
+## 系统机制
+- <b> 执行数据处理获取数据模板 => 监控点解析 => 结构存入表中  </b>
+- <b> 获取真实数据 => 监控点解析 => 判断异常点是否触发 => 通知 记录 </b>
 
 

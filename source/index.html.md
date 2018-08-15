@@ -16,8 +16,7 @@ includes:
   - adapter
   - JSSDK
   - examples
-  - user
-
+  
 search: true
 ---
 
